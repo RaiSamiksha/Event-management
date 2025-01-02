@@ -1,3 +1,11 @@
 1)  npx sequelize-cli init
 
-2)  
+2)  npx sequelize-cli model:generate --name User --attributes name:string,email:string,password:string,role:string
+
+3) npx sequelize-cli db:migrate
+
+4) npx sequelize-cli seed:generate --name demo-users
+
+5) npx sequelize-cli seed:generate --name demo-events
+
+6) npx sequelize-cli db:seed:all

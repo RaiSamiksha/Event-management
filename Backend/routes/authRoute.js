@@ -1,9 +1,12 @@
 const express = require('express');
+const authController = require('../controllers/authController'); // Adjust path to your controller
+
 const router = express.Router();
 
-router.get('/home',(req,res)=>{
-    res.send("Hello from event management!!");
-})
+// POST /signup
+router.post('/signup', authController.signup);
 
+// POST /login
+router.post('/login', authController.login);
 
-module.exports = router; 
+module.exports = router;
